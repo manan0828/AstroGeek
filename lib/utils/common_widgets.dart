@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
+//Common widget for most of the App Bar title
 class AppBarTitle extends StatelessWidget {
   final String text;
   const AppBarTitle({super.key, this.text = "ASTROGEEK"});
@@ -20,6 +21,7 @@ class AppBarTitle extends StatelessWidget {
   }
 }
 
+//Primary Text style used in the app "Inter".
 TextStyle primaryTextStyle(double size) {
   return TextStyle(
       fontFamily: 'Inter',
@@ -28,6 +30,7 @@ TextStyle primaryTextStyle(double size) {
       color: Colors.white);
 }
 
+//Back button implmented in every appbar initiating pop in navigation.
 class CommonBackButton extends StatelessWidget {
   const CommonBackButton({super.key});
 
@@ -46,6 +49,7 @@ class CommonBackButton extends StatelessWidget {
   }
 }
 
+//String extendion to output data in terminal for testing purposes
 extension StringExtension on String {
   void get logit {
     if (kDebugMode) {
@@ -54,6 +58,7 @@ extension StringExtension on String {
   }
 }
 
+//Check if the location permission are given for the app
 Future<bool> _handleLocationPermission() async {
   LocationPermission permission = await Geolocator.checkPermission();
   if (permission == LocationPermission.denied) {
@@ -69,6 +74,7 @@ Future<bool> _handleLocationPermission() async {
   return true;
 }
 
+//Get the coordinates of the device location and return them
 Future<Location> getCurrentPosition() async {
   final hasPermission = await _handleLocationPermission();
   if (!hasPermission) return Location("-27.4748", "153.017");

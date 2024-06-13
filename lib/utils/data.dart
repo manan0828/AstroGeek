@@ -246,6 +246,7 @@ class AssetConstants {
   static const String lunarEclipse = "assets/eclipses/lunar-eclipse.png";
 }
 
+//String constants
 class StringConstants {
   static const String apodDetails =
       "Not the James Webb Space Telescope's latest view of a distant galactic nebula, this cloud of gas and dust dazzled spacecoast skygazers on March 3. The telephoto snapshot was taken minutes after the launch of a Falcon 9 rocket on the SpaceX Crew-8 mission, to the International Space Station. It captures plumes and exhaust from the separated first and second stage, a drifting Rorschach pattern in dark evening skies. The bright spot near bottom center within the stunning terrestrial nebulosity is the second stage engine firing to carry 4 humans to space in the Crew Dragon spacecraft Endeavour. In sharp silhouette just above it is the Falcon 9 first stage booster orienting itself for return to a landing zone at Cape Canaveral, planet Earth. This reuseable first stage booster was making its first flight. But the Crew Dragon Endeavour capsule has flown humans to low Earth orbit and back again 4 times before. Endeavour, as a name for a spacecraft, has also seen reuse, christening retired Space Shuttle Endeavour and the Apollo 15 command module.";
@@ -256,11 +257,7 @@ class StringConstants {
   static const String mapInfo = "This page will redirect you to the HTML format of the Maps provided by NASA for different bodies. \nCurrently the maps for Moon and Mars are available. \nMore Maps will be available soon.";
 }
 
-class URL {
-  static const String apodURL = "https://api.nasa.gov/planetary/apod?api_key=";
-  static const String geoURL = "https://api.ipgeolocation.io/astronomy?apiKey=";
-}
-
+//Class to store the location of theh device
 class Location {
   String latitude;
   String longitude;
